@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./CSS/styles.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="box_menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="box_formulario">
+        <form class="form_contacto" action="#" method="post">
+            <div>
+                <label for="nombre_usuario">Nombre de usuario</label>
+                <input id="nombre_usuario" name="nombre_usuario" type="text" maxlength="30" required>
+            </div>
+
+            <div>
+                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <div>
+                <label for="telefono">Tel&eacute;fono</label>
+                <input id="telefono" name="telefono" type="tel">
+            </div>
+
+            <div>
+                <label for="tipo_usuario">Tipo de usuario</label>
+                <select id="tipo_usuario" name="tipo_usuario">
+                    <option value="0">Estudiante</option>
+                    <option value="1">Docente</option>
+                    <option value="2">Administrativo</option>
+                    <option value="3">Auxiliar</option>
+                    <option value="4">Director</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="consulta" for="consulta">Consulta</label>
+                <textarea id="consulta" name="consulta" rows="8" cols="80" required></textarea>
+            </div>
+
+            <div>
+                <label for="tipo_consulta">Es urgente</label>
+                <input type="checkbox" id="tipo_consulta" name="tipo_consulta" value="1">
+            </div>
+
+            <input type="submit" id="boton_enviar" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </div>
+</div>
+</body>
+</html>
