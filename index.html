@@ -2,15 +2,17 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="./CSS/styles.css" type="text/css">
+    <script src="JS/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="JS/commons.js"></script>
+    <script type="text/javascript" src="JS/colorpicker.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
         body {
-            font-family: Arial;
-            font-size:14px;
+            font-family: Tahoma;
+            font-size:12px;
         }
     </style>
-
 </head>
 <body>
     <div>
@@ -19,8 +21,33 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyecto.html">Proyecto</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a style="float:right;" class="resize_box">
+                    <span>Cambiar tamaño</span>
+                    <div class="resize_box-contenido">
+                        <input type="text" id="text_resize" class="input_resize"/>
+                        <button type="button" id="btn_resize" onClick="resize()">OK</button>
+                    </div>
+                </a></li>
+                <li><a class="color_picker" style="float:right;">
+                    <span>Cambiar color</span>
+                    <div class="color_picker-contenido">
+                        <div style="display:inline-block" id="picker"></div>
+                        <div style="display:inline-block" id="slide"></div>
+                        <script type="text/javascript">
+                            ColorPicker(
+                                document.getElementById('slide'),
+                                document.getElementById('picker'),
+                                function(hex, hsv, rgb) {
+                                    document.body.style.backgroundColor = hex;
+                                });
+                        </script>
+                    </div>
+                    </a>
+                </li>
             </ul>
         </div>
+        <div style="clear:both;"></div>
+
         <div>
             <h1> SISTEMA DE TIEMPO REAL </h1>
             <p class="index_sangria">
@@ -54,7 +81,7 @@
         </div>
         <div>
             <h2>Referencias:</h2>
-            <table>
+            <table border>
                 <tr>
                     <th>Nombre</th>
                     <th>País</th>

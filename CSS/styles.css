@@ -1,23 +1,87 @@
+/*Estilos cross páginas */
+
+.color_picker {
+    position: relative;
+    display: inline-block;
+}
+
+.color_picker-contenido {
+    display: none;
+    top:50px;
+    right:0;
+    position: absolute;
+    background-color: #333333;
+    min-width: 235px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.color_picker:hover .color_picker-contenido {
+    display: block;
+}
+
+.resize_box {
+    position: relative;
+    display: inline-block;
+}
+
+.resize_box-contenido {
+    display: none;
+    top:50px;
+    right:0;
+    position: absolute;
+    background-color: #333333;
+    min-width: 118px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.resize_box-contenido input {
+    width: 67px;
+    height: 32px;
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.resize_box-contenido button {
+    height: 37px;
+    border-radius: 7px;
+    width: 40px;
+}
+
+.resize_box:hover .resize_box-contenido {
+    display: block;
+}
+
+#picker { width: 200px; height: 200px }
+#slide { width: 30px; height: 200px }
+
+
 /*Estilos index*/
+.box_menu {
+    background-color: #333333;
+    height:51px;
+}
 .box_menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #333333;
 }
-.box_menu li {
-    float: left;
-}
+
 .box_menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
+    font-size:16px;
     text-decoration: none;
+    float:left;
+    padding: 16px;
+    background-color: #333333;
+    color: #fff;
 }
 .box_menu li a:hover {
-    background-color: #111111;
+    background-color: #565454;
 }
 .index_sangria {
     text-indent:20px;
