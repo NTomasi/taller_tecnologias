@@ -6,6 +6,7 @@
     <script type="text/javascript" src="JS/commons.js"></script>
     <script type="text/javascript" src="JS/colorpicker.js"></script>
     <script src="JS/contacto_validator.js"></script>
+    <script src="JS/moment.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -58,7 +59,8 @@
 
             <div>
                 <label for="fecha_nacimiento">Fecha de nacimiento</label>
-                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date">
+                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" onchange="setAge()">
+                <span id="age"></span>
             </div>
 
             <div>
@@ -92,7 +94,7 @@
                 <input type="checkbox" id="tipo_consulta" name="tipo_consulta" value="1">
             </div>
 
-            <input type="submit" id="boton_enviar" value="Enviar">
+            <input type="submit" id="boton_enviar" value="Enviar" onclick="validate_form()" >
             <input type="reset" value="Limpiar">
         </form>
     </div>
